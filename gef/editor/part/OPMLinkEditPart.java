@@ -19,8 +19,8 @@ import org.eclipse.gef.editpolicies.ConnectionEndpointEditPolicy;
 
 import com.oscar.opm.gef.editor.policy.OPMLinkBendpointEditPolicy;
 import com.oscar.opm.gef.editor.policy.OPMLinkConnectionEditPolicy;
-import com.oscar.opm.model.OPMLink;
-import com.oscar.opm.model.OPMLinkRouterKind;
+import opm.OPMLink;
+import opm.OPMLinkRouterKind;
 
 public class OPMLinkEditPart extends AbstractConnectionEditPart {
 	

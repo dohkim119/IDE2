@@ -3,9 +3,9 @@ package com.oscar.opm.gef.editor.command;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.commands.Command;
 
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMContainer;
-import com.oscar.opm.model.OPMNode;
+import opm.OPMObjectProcessDiagram;
+import opm.OPMContainer;
+import opm.OPMNode;
 
 public class OPMNodeCreateCommand extends Command {
 		

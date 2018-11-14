@@ -7,10 +7,10 @@ import java.util.Map;
 
 import org.eclipse.gef.commands.Command;
 
-import com.oscar.opm.model.OPMContainer;
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMNode;
-import com.oscar.opm.model.OPMLink;
+import opm.OPMContainer;
+import opm.OPMObjectProcessDiagram;
+import opm.OPMNode;
+import opm.OPMLink;
 
 public class OPMNodeDeleteCommand extends Command {
 	

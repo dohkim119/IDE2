@@ -2,7 +2,7 @@ package com.oscar.opm.gef.editor.command;
 
 import org.eclipse.gef.commands.Command;
 
-import com.oscar.opm.model.OPMThing;
+import opm.OPMThing;
 
 public class OPMThingRenameCommand extends Command {
 	

@@ -11,13 +11,13 @@ import org.eclipse.gef.requests.ReconnectRequest;
 
 import com.oscar.opm.gef.editor.command.OPMLinkCreateCommand;
 import com.oscar.opm.gef.editor.command.OPMNodeCreateCommand;
-import com.oscar.opm.gef.editor.part.OPMStructuralLinkAggregatorEditPart;
-import com.oscar.opm.model.OPMFactory;
-import com.oscar.opm.model.OPMLink;
-import com.oscar.opm.model.OPMNode;
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMStructuralLinkAggregator;
-import com.oscar.opm.model.OPMLinkRouterKind;
+//import com.oscar.opm.gef.editor.part.OPMStructuralLinkAggregatorEditPart;
+import opm.OpmFactory;
+import opm.OPMLink;
+import opm.OPMNode;
+import opm.OPMObjectProcessDiagram;
+//import com.oscar.opm.model.OPMStructuralLinkAggregator;
+import opm.OPMLinkRouterKind;
 
 
 public class OPMNodeGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
@@ -43,7 +43,7 @@ public class OPMNodeGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 	    // something that we don't want to happen.
 		
 		// -> in this part, if request's source is LinkAggregator then return unvaild command.
-		if(request.getSourceEditPart() instanceof OPMStructuralLinkAggregatorEditPart) {
+		/*if(request.getSourceEditPart() instanceof OPMStructuralLinkAggregatorEditPart) {
 			return null;
 		}
 		// request.getNewObject -> get newobject from request's Editpart
@@ -51,7 +51,7 @@ public class OPMNodeGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 		if(request.getNewObject() instanceof OPMStructuralLinkAggregator) {
 			request.setStartCommand(new Command() {});
 			return request.getStartCommand();
-		}
+		}*/
 		OPMLinkCreateCommand result = new OPMLinkCreateCommand();
 		result.setSource((OPMNode)getHost().getModel());
 		result.setLink((OPMLink) request.getNewObject());
@@ -78,19 +78,19 @@ public class OPMNodeGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
         // when the used clicks it is not created.
 		
 		// -> in this part, if request's target is LinkAggregator then return unvalid command.
-		if(request.getStartCommand() == null || request.getTargetEditPart() instanceof OPMStructuralLinkAggregatorEditPart) {
+		/*if(request.getStartCommand() == null || request.getTargetEditPart() instanceof OPMStructuralLinkAggregatorEditPart) {
 			return null;
-		}
+		}*/
 		
 		Command command = null;
 		// if request made from StructuralLinkCreateTool, do Structural Link's job.
-		if(request.getNewObject() instanceof OPMStructuralLinkAggregator) {
+		/*if(request.getNewObject() instanceof OPMStructuralLinkAggregator) {
 			command = handleOPMStructuralLinkRequest(request);
-		} else {
+		} else {*/
 			OPMLinkCreateCommand linkCreateCommand = (OPMLinkCreateCommand) request.getStartCommand();
 			linkCreateCommand.setTarget((OPMNode)getHost().getModel());
 			command= linkCreateCommand;
-		}	
+		//}	
 		return command;
 	}
 	@Override
@@ -119,7 +119,7 @@ public class OPMNodeGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
      * @return a command that creates the links as stated above.
      */
 	
-	private Command handleOPMStructuralLinkRequest(CreateConnectionRequest request) {
+	/*private Command handleOPMStructuralLinkRequest(CreateConnectionRequest request) {
 		Command command = null;
 		
 		OPMNode sourceNode = (OPMNode) request.getSourceEditPart().getModel();
@@ -166,7 +166,7 @@ public class OPMNodeGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 		command.setSource(source);
 		command.setTarget(target);
 		command.setOPD(opd);
-		OPMLink link = OPMFactory.eINSTANCE.createOPMLink();
+		OPMLink link = OpmFactory.eINSTANCE.createOPMLink();
 		link.setRouterKind(OPMLinkRouterKind.MANHATTAN);
 		command.setLink(link);
 		return command;

@@ -5,8 +5,8 @@ import org.eclipse.draw2d.PolylineConnection;
 import org.eclipse.draw2d.PolylineDecoration;
 
 import com.oscar.opm.gef.editor.figure.CircleDecoration;
-import com.oscar.opm.model.OPMProceduralLink;
-import com.oscar.opm.model.OPMProceduralLinkKind;
+import opm.OPMProceduralLink;
+import opm.OPMProceduralLinkKind;
 
 public class OPMProceduralLinkEditPart extends OPMLinkEditPart {
 

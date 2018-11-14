@@ -3,7 +3,7 @@ package com.oscar.opm.gef.editor.command;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.commands.Command;
 
-import com.oscar.opm.model.OPMNode;
+import opm.OPMNode;
 
 
 public class OPMNodeChangeConstraintCommand extends Command {

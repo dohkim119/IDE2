@@ -6,7 +6,7 @@ import org.eclipse.gef.requests.DirectEditRequest;
 
 import com.oscar.opm.gef.editor.command.OPMThingRenameCommand;
 import com.oscar.opm.gef.editor.figure.OPMThingFigure;
-import com.oscar.opm.model.OPMThing;
+import opm.OPMThing;
 
 public class OPMThingDirectEditPolicy extends DirectEditPolicy {
 

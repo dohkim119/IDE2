@@ -18,8 +18,8 @@ import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
 import org.eclipse.gef.editpolicies.SnapFeedbackPolicy;
 
 import com.oscar.opm.gef.editor.policy.OPMContainerXYLayoutPolicy;
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMNode;
+import opm.OPMObjectProcessDiagram;
+import opm.OPMNode;
 
 public class OPMObjectProcessDiagramEditPart extends AbstractGraphicalEditPart {
 	

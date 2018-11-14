@@ -4,7 +4,7 @@ package com.oscar.opm.gef.editor.command;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.gef.commands.Command;
 
-import com.oscar.opm.model.OPMLink;
+import opm.OPMLink;
 
 public final class OPMLinkDeleteBendpointCommand extends Command {
 	private Point location;

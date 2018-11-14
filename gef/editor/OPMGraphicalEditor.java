@@ -30,13 +30,11 @@ import org.eclipse.ui.views.properties.IPropertySourceProvider;
 import org.eclipse.ui.views.properties.PropertySheetPage;
 
 import com.oscar.opm.gef.action.OPMCreateObjectAction;
-import com.oscar.opm.gef.action.OscarCodePathChangeAction;
-import com.oscar.opm.gef.action.OscarCodeModifyAction;
 import com.oscar.opm.gef.action.ResizeToContentsAction;
 import com.oscar.opm.gef.editor.part.OPMEditPartFactory;
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMPackage;
-import com.oscar.opm.model.provider.OPMItemProviderAdapterFactory;
+import opm.OPMObjectProcessDiagram;
+import opm.OpmPackage;
+import opm.provider.OpmItemProviderAdapterFactory;
 
 public class OPMGraphicalEditor extends GraphicalEditorWithFlyoutPalette 
 {
@@ -72,7 +70,7 @@ public class OPMGraphicalEditor extends GraphicalEditorWithFlyoutPalette
 	@Override
 	protected void createActions() {
 		super.createActions();
-		OscarCodePathChangeAction changeAction = new OscarCodePathChangeAction(this);
+		/*OscarCodePathChangeAction changeAction = new OscarCodePathChangeAction(this);
 		getActionRegistry().registerAction(changeAction);
 		getSelectionActions().add(changeAction.getId());
 		OscarCodeModifyAction modifyAction = new OscarCodeModifyAction(this);
@@ -119,7 +117,7 @@ public class OPMGraphicalEditor extends GraphicalEditorWithFlyoutPalette
 	
 	private void loadInput(IEditorInput input) 
 	{
-		OPMPackage.eINSTANCE.eClass();
+		OpmPackage.eINSTANCE.eClass();
 		ResourceSet resourceSet = new ResourceSetImpl();
 		if(input instanceof IFileEditorInput) {
 			IFileEditorInput fileInput = (IFileEditorInput) input;
@@ -161,7 +159,7 @@ public class OPMGraphicalEditor extends GraphicalEditorWithFlyoutPalette
 	            // to yield standard eclipse interfaces.
 				IPropertySourceProvider sourceProvider = new IPropertySourceProvider()
 				{
-					IPropertySourceProvider modelPropertySourceProvider = new AdapterFactoryContentProvider(new OPMItemProviderAdapterFactory());
+					IPropertySourceProvider modelPropertySourceProvider = new AdapterFactoryContentProvider(new OpmItemProviderAdapterFactory());
 				
 					@Override
 					public IPropertySource getPropertySource(Object object) 

@@ -9,7 +9,9 @@ import org.eclipse.gef.editpolicies.BendpointEditPolicy;
 import com.oscar.opm.gef.editor.command.OPMLinkCreateBendpointCommand;
 import com.oscar.opm.gef.editor.command.OPMLinkMoveBendpointCommand;
 import com.oscar.opm.gef.editor.command.OPMLinkDeleteBendpointCommand;
-import com.oscar.opm.model.OPMLink;
+import opm.OPMLink;
+
+
 
 public class OPMLinkBendpointEditPolicy extends BendpointEditPolicy {
 	

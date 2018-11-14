@@ -2,15 +2,15 @@ package com.oscar.opm.gef.editor.factory;
 
 import org.eclipse.gef.requests.CreationFactory;
 
-import com.oscar.opm.model.OPMFactory;
-import com.oscar.opm.model.OPMProceduralLink;
-import com.oscar.opm.model.OPMProceduralLinkKind;
+import opm.OpmFactory;
+import opm.OPMProceduralLink;
+import opm.OPMProceduralLinkKind;
 
 public class OPMInstrumentLinkFactory implements CreationFactory {
 
 	@Override
 	public Object getNewObject() {
-		OPMProceduralLink link = OPMFactory.eINSTANCE.createOPMProceduralLink();
+		OPMProceduralLink link = OpmFactory.eINSTANCE.createOPMProceduralLink();
 		link.setKind(OPMProceduralLinkKind.INSTRUMENT);
 		return link;
 	}

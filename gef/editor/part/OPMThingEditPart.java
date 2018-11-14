@@ -21,7 +21,7 @@ import org.eclipse.jface.viewers.TextCellEditor;
 
 import com.oscar.opm.gef.editor.figure.OPMThingFigure;
 import com.oscar.opm.gef.editor.policy.OPMThingDirectEditPolicy;
-import com.oscar.opm.model.OPMThing;
+import opm.OPMThing;
 
 public abstract class OPMThingEditPart extends OPMNodeEditPart implements NodeEditPart{
 	

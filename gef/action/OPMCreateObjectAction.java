@@ -11,7 +11,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import com.oscar.opm.gef.editor.OPMGraphicalEditor;
 import com.oscar.opm.gef.editor.command.OPMNodeCreateCommand;
 import com.oscar.opm.gef.editor.factory.OPMObjectFactory;
-import com.oscar.opm.model.OPMNode;
+import opm.OPMNode;
 
 public class OPMCreateObjectAction extends WorkbenchPartAction {
 	

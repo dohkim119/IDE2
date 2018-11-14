@@ -1,15 +1,15 @@
 package com.oscar.opm.gef.utils;
 
-import com.oscar.opm.model.OPMLink;
-import com.oscar.opm.model.OPMObject;
-import com.oscar.opm.model.OPMProcess;
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMFactory;
+import opm.OPMLink;
+import opm.OPMObject;
+import opm.OPMProcess;
+import opm.OPMObjectProcessDiagram;
+import opm.OpmFactory;
 
 public enum OPMModelUtils {
 	INSTANCE;
 	
-	private OPMFactory factory = OPMFactory.eINSTANCE;
+	private OpmFactory factory = OpmFactory.eINSTANCE;
 	
 	public OPMObjectProcessDiagram createModel() {
 		OPMObjectProcessDiagram opd = factory.createOPMObjectProcessDiagram();

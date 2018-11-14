@@ -8,8 +8,8 @@ import org.eclipse.gef.ui.actions.SelectionAction;
 import org.eclipse.ui.IWorkbenchPart;
 
 import com.oscar.opm.gef.editor.part.OPMNodeEditPart;
-import com.oscar.opm.gef.editor.part.OPMStructuralLinkAggregatorEditPart;
-import com.oscar.opm.model.OPMStructuralLinkAggregator;
+//import com.oscar.opm.gef.editor.part.OPMStructuralLinkAggregatorEditPart;
+
 
 /**
  * An action that executes the command returned by the selected {@link EditPart} instances when given a
@@ -45,9 +45,9 @@ public class ResizeToContentsAction extends SelectionAction {
 		@SuppressWarnings("unchecked") List<OPMNodeEditPart> editParts = getSelectedObjects();
 		CompoundCommand compoundCommand = new CompoundCommand();
 		for(OPMNodeEditPart nodeEditPart : editParts) {
-			if(!(nodeEditPart instanceof OPMStructuralLinkAggregatorEditPart)) {
+			//if(!(nodeEditPart instanceof OPMStructuralLinkAggregatorEditPart)) {
 				compoundCommand.add(nodeEditPart.getCommand(request));
-			}
+			//}
 		}
 		execute(compoundCommand);
 	}
@@ -62,7 +62,7 @@ public class ResizeToContentsAction extends SelectionAction {
 			return false;
 		}
 		for(Object selectedObject : getSelectedObjects()) {
-			if(!(selectedObject instanceof OPMNodeEditPart) || (selectedObject instanceof OPMStructuralLinkAggregator)) {
+			if(!(selectedObject instanceof OPMNodeEditPart)) {
 				return false;
 			}
 		}

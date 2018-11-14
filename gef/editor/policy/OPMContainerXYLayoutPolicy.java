@@ -10,16 +10,16 @@ import org.eclipse.gef.editpolicies.XYLayoutEditPolicy;
 import org.eclipse.gef.requests.ChangeBoundsRequest;
 import org.eclipse.gef.requests.CreateRequest;
 
-import com.oscar.opm.model.OPMContainer;
-import com.oscar.opm.model.OPMNode;
-import com.oscar.opm.model.OPMObject;
-import com.oscar.opm.model.OPMObjectProcessDiagram;
-import com.oscar.opm.model.OPMProcess;
-import com.oscar.opm.model.OscarCode;
-import com.oscar.opm.gef.editor.part.OPMStructuralLinkAggregatorEditPart;
+import opm.OPMContainer;
+import opm.OPMNode;
+import opm.OPMObject;
+import opm.OPMObjectProcessDiagram;
+import opm.OPMProcess;
+//import opm.OscarCode;
+//import com.oscar.opm.gef.editor.part.OPMStructuralLinkAggregatorEditPart;
 import com.oscar.opm.gef.editor.policy.OPMContainerXYLayoutPolicy;
 import com.oscar.opm.gef.editor.command.OPMNodeCreateCommand;
-import com.oscar.opm.gef.editor.command.OscarCodeFileLocateCommand;
+//import com.oscar.opm.gef.editor.command.OscarCodeFileLocateCommand;
 import com.oscar.opm.gef.editor.command.OPMNodeChangeConstraintCommand;
 
 
@@ -46,10 +46,11 @@ public class OPMContainerXYLayoutPolicy extends XYLayoutEditPolicy {
 	protected Command getCreateCommand(CreateRequest request) 
 	{
 		Command retVal = null;
-		if(request.getNewObjectType().equals(OscarCode.class)) {
+		/*if(request.getNewObjectType().equals(OscarCode.class)) {
 			retVal = getNodeCreateCommand(request);
 		}
-		else if(request.getNewObjectType().equals(OPMObject.class) || request.getNewObjectType().equals(OPMProcess.class)){
+		else*/ 
+			if(request.getNewObjectType().equals(OPMObject.class) || request.getNewObjectType().equals(OPMProcess.class)){
 			retVal = getNodeCreateCommand(request);
 		}
 		return retVal;
@@ -92,11 +93,11 @@ public class OPMContainerXYLayoutPolicy extends XYLayoutEditPolicy {
 	 */
 	@Override
 	protected Command getResizeChildrenCommand(ChangeBoundsRequest request) {
-		for(Object editPart : request.getEditParts()) {
+		/*for(Object editPart : request.getEditParts()) {
 			if(editPart instanceof OPMStructuralLinkAggregatorEditPart) {
 				return UnexecutableCommand.INSTANCE;
 			}
-		}
+		}*/
 		return getChangeConstraintCommand(request);
 	}	
 }

@@ -13,8 +13,8 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
 import org.eclipse.gef.NodeEditPart;
 
-import com.oscar.opm.model.OPMLink;
-import com.oscar.opm.model.OPMNode;
+import opm.OPMLink;
+import opm.OPMNode;
 import com.oscar.opm.gef.editor.figure.OPMNodeFigure;
 import com.oscar.opm.gef.editor.policy.OPMContainerXYLayoutPolicy;
 import com.oscar.opm.gef.editor.policy.OPMNodeComponentEditPolicy;

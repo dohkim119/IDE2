@@ -5,7 +5,7 @@ import org.eclipse.gef.editpolicies.ConnectionEditPolicy;
 import org.eclipse.gef.requests.GroupRequest;
 
 import com.oscar.opm.gef.editor.command.OPMLinkDeleteCommand;
-import com.oscar.opm.model.OPMLink;
+import opm.OPMLink;
 
 public class OPMLinkConnectionEditPolicy extends ConnectionEditPolicy {
 

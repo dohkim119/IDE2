@@ -2,15 +2,15 @@ package com.oscar.opm.gef.editor.factory;
 
 import org.eclipse.gef.requests.CreationFactory;
 
-import com.oscar.opm.model.OPMFactory;
-import com.oscar.opm.model.OPMObject;
+import opm.OpmFactory;
+import opm.OPMObject;
 
 
 public class OPMObjectFactory implements CreationFactory {
 
 	@Override
 	public Object getNewObject() {
-		return OPMFactory.eINSTANCE.createOPMObject();
+		return OpmFactory.eINSTANCE.createOPMObject();
 	}
 
 	@Override

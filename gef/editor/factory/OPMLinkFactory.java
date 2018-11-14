@@ -2,14 +2,14 @@ package com.oscar.opm.gef.editor.factory;
 
 import org.eclipse.gef.requests.CreationFactory;
 
-import com.oscar.opm.model.OPMFactory;
-import com.oscar.opm.model.OPMLink;
+import opm.OpmFactory;
+import opm.OPMLink;
 
 public class OPMLinkFactory implements CreationFactory {
 
 	@Override
 	public Object getNewObject() {
-		return OPMFactory.eINSTANCE.createOPMLink();
+		return OpmFactory.eINSTANCE.createOPMLink();
 	}
 
 	@Override

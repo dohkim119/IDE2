@@ -3,7 +3,7 @@ package com.oscar.opm.gef.editor.command;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.draw2d.geometry.Point;
 
-import com.oscar.opm.model.OPMLink;
+import opm.OPMLink;
 
 
 

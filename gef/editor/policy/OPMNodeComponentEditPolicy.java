@@ -8,8 +8,8 @@ import org.eclipse.gef.commands.CompoundCommand;
 import org.eclipse.gef.editpolicies.ComponentEditPolicy;
 import org.eclipse.gef.requests.GroupRequest;
 
-import com.oscar.opm.model.OPMNode;
-import com.oscar.opm.model.OPMLink;
+import opm.OPMNode;
+import opm.OPMLink;
 import com.oscar.opm.gef.action.ResizeToContentsAction;
 import com.oscar.opm.gef.editor.command.OPMNodeChangeConstraintCommand;
 import com.oscar.opm.gef.editor.command.OPMNodeDeleteCommand;
